@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peliculas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Recomendaciones de cine</h1>
+        <p>Ingresa tu edad: </p>
+        <input id="edad" type="number" min="1" class="edad">
+        <p>Selecciona tu genero de películas favorito: </p>
+        <div class="opciones">
+            <button onclick="filtro('comedia')">Comedia</button>
+            <button onclick="filtro('crimen')">Crimen</button>
+            <button onclick="filtro('drama')">Drama</button>
+            <button onclick="filtro('musical')">Musical</button>
+        </div>
+        <button class="reiniciar" onclick="reiniciar()">Reiniciar filtro</button>
+        <h2 id="tituloRecomendación"></h2>
+        <div class="opcionesPeliculas">
+            <p id="recomendacion"></p>    
+            <p id="recomendacion2"></p>    
+            <p id="recomendacion3"></p>    
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
