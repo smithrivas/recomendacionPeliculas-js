@@ -12,8 +12,15 @@ function reiniciar() {
   edad.value = "";
 }
 
+function limpiar() {
+  recomendacion.textContent = "";
+  recomendacion2.textContent = "";
+  recomendacion3.textContent = "";
+}
+
 function filtro(genero) {
   if (edad.value < 1 || edad.value == "") {
+    limpiar();
     tituloRecomendación.textContent = "";
     alert("Por favor ingresa tu edad.");
     return;
@@ -25,12 +32,15 @@ function filtro(genero) {
       comedia();
       break;
     case "crimen":
+      recomendacionTitulo();
       crimen();
       break;
     case "drama":
+      recomendacionTitulo();
       drama();
       break;
     case "musical":
+      recomendacionTitulo();
       musical();
       break;
   }
@@ -41,6 +51,7 @@ function recomendacionTitulo() {
 }
 
 function comedia() {
+  limpiar();
   if (edad.value < 13) {
     recomendacion.textContent = "Back to the future (ATP)";
   } else if (edad.value >= 13 && edad.value < 16) {
